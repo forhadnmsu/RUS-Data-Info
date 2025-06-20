@@ -2,8 +2,8 @@
 These variables store information about reconstructed dimuons (`mu+ mu-` pairs), will be obtained from the `SRecDimuon` class, at the default vertex, target (`tgt`), and dump (`dump`) regions.
 
 | Variable Name       | Type                | Description                                                                        | User Functions                      |
-|---------------------|---------------------|------------------------------------------------------------------------------------|-------------------------------------|                     
-| `dimuon_id`         | `std::vector<int>`    | List of dimuon IDs                           dimuon.                             | `SRecDimuon::get_dimuon_id()`       |
+|---------------------|---------------------|------------------------------------------------------------------------------------|-------------------------------------|        
+| `dimuon_id`         | `std::vector<int>`    | List of dimuon IDs.                                                              | `SRecDimuon::get_dimuon_id()`       |
 | `rec_dimuon_id`     | `std::vector<int>`    | List of reconstructed dimuon IDs only when the true dimuon exists.               | `SRecDimuon::get_rec_dimuon_id()`   |
 | `track_id_pos`      | `std::vector<int>`    | Track ID of the positive muon track (returns the index of rhe `SRecTrack`).      | `SRecDimuon::get_track_id_pos()`    |
 | `track_id_neg`      | `std::vector<int>`    | Track ID of the negative muon track (returns the index of rhe `SRecTrack`).      | `SRecDimuon::get_track_id_neg()`    |
