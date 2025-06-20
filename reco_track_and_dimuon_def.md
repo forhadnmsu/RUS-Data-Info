@@ -1,5 +1,5 @@
 ## Reconstructed Dimuon Variables
-These variables store information about reconstructed dimuons (`mu+ mu-` pairs), derived from the `SQDimuon` class, at the default vertex, target (`tgt`), and dump (`dump`) regions.
+These variables store information about reconstructed dimuons (`mu+ mu-` pairs), will be obtained from the `SRecDimuon` class, at the default vertex, target (`tgt`), and dump (`dump`) regions.
 
 | Variable Name       | Type                | Description                                                                        | User Functions                      |
 |---------------------|---------------------|------------------------------------------------------------------------------------|-------------------------------------|                     
@@ -33,7 +33,7 @@ These variables store information about reconstructed dimuons (`mu+ mu-` pairs),
 | `rec_pz_neg_dump`   | `std::vector<double>` | z-component of the momentum of the vertexed (dump) negative muon of the dimuon   | `SRecDimuon::p_neg_dump.Pz ()`      |
 
 ## Reconstructed Track Variables
-These variables store information about reconstructed muon tracks, derived from the `SQTrack` class, at the vertex, stations 1 and 3, target, and dump regions.
+These variables store information about reconstructed muon tracks, will be obtained from the `SRecTrack` class, at the vertex, stations 1 and 3, target, and dump regions.
 
 | Variable Name       | Type                  | Description                                                                 | User Functions                         |
 |---------------------|-----------------------|-----------------------------------------------------------------------------|----------------------------------------|
