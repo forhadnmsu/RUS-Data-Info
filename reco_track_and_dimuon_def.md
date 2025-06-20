@@ -13,14 +13,12 @@ These variables store information about reconstructed dimuons (`mu+ mu-` pairs),
 | `rec_px_neg`        | `std::vector<double>` | x-component of the momentum of the vertexed (default) negative muon of the dimuon| `SRecDimuon::get_mom().Px()`        |
 | `rec_py_neg`        | `std::vector<double>` | y-component of the momentum of the vertexed (default) negative muon of the dimuon| `SRecDimuon::get_mom().Py()`        |
 | `rec_pz_neg`        | `std::vector<double>` | z-component of the momentum of the vertexed (default) negative muon of the dimuon| `SRecDimuon::get_mom().Pz()`        |
-
 | `rec_x_pos`        | `std::vector<double>` | x-component of the position of the vertexed (default) positive muon of the dimuon| `SRecDimuon::get_pos().X()`          |
 | `rec_y_pos`        | `std::vector<double>` | y-component of the position of the vertexed (default) positive muon of the dimuon| `SRecDimuon::get_pos().Y()`          |
 | `rec_z_pos`        | `std::vector<double>` | z-component of the position of the vertexed (default) positive muon of the dimuon| `SRecDimuon::get_pos().Z()`          |
 | `rec_x_neg`        | `std::vector<double>` | x-component of the position of the vertexed (default) negative muon of the dimuon| `SRecDimuon::get_pos().X()`          |
 | `rec_y_neg`        | `std::vector<double>` | y-component of the position of the vertexed (default) negative muon of the dimuon| `SRecDimuon::get_pos().Y()`          |
 | `rec_z_neg`        | `std::vector<double>` | z-component of the position of the vertexed (default) negative muon of the dimuon| `SRecDimuon::get_pos().Z()`          |
-
 | `rec_px_pos_tgt`    | `std::vector<double>` | x-component of the momentum of the vertexed (target) positive muon of the dimuon | `SRecDimuon::p_pos_target().Px()`   |
 | `rec_py_pos_tgt`    | `std::vector<double>` | y-component of the momentum of the vertexed (target) positive muon of the dimuon | `SRecDimuon::p_pos_target().Py()`   |
 | `rec_pz_pos_tgt`    | `std::vector<double>` | z-component of the momentum of the vertexed (target) positive muon of the dimuon | `SRecDimuon::p_pos_target().Pz()`   |
