@@ -3,10 +3,10 @@ These variables store information about reconstructed dimuons (`mu+ mu-` pairs),
 
 | Variable Name        | Type                  | Description                                                                      | User Functions                      |
 |----------------------|-----------------------|----------------------------------------------------------------------------------|-------------------------------------|        
-| `dimuon_id`          | `std::vector<int>`    | List of dimuon IDs.                                                              | `SRecDimuon::get_dimuon_id()`       |
+| `rec_dimuon_id`      | `std::vector<int>`    | List of dimuon IDs.                                                              | `SRecDimuon::get_dimuon_id()`       |
 |`rec_dimuon_true_id`  | `std::vector<int>`    | List of reconstructed dimuon IDs only when the true dimuon exists.               | `SRecDimuon::get_rec_dimuon_id()`   |
-| `track_id_pos`       | `std::vector<int>`    | Track ID of the positive muon track (returns the index of rhe `SRecTrack`).      | `SRecDimuon::get_track_id_pos()`    |
-| `track_id_neg`       | `std::vector<int>`    | Track ID of the negative muon track (returns the index of rhe `SRecTrack`).      | `SRecDimuon::get_track_id_neg()`    |
+| `rec_track_id_pos`   | `std::vector<int>`    | Track ID of the positive muon track (returns the index of rhe `SRecTrack`).      | `SRecDimuon::get_track_id_pos()`    |
+| `rec_track_id_neg`   | `std::vector<int>`    | Track ID of the negative muon track (returns the index of rhe `SRecTrack`).      | `SRecDimuon::get_track_id_neg()`    |
 | `rec_px_pos`         | `std::vector<double>` | x-component of the momentum of the vertexed (default) positive muon of the dimuon| `SRecDimuon::get_mom_pos().Px()`    |
 | `rec_py_pos`         | `std::vector<double>` | y-component of the momentum of the vertexed (default) positive muon of the dimuon| `SRecDimuon::get_mom_pos().PY()`    |
 | `rec_pz_pos`         | `std::vector<double>` | z-component of the momentum of the vertexed (default) positive muon of the dimuon| `SRecDimuon::get_mom_pos().Pz()`    |
