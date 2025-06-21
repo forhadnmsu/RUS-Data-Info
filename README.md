@@ -7,12 +7,12 @@ These variables store information about reconstructed dimuons (`mu+ mu-` pairs),
 |`rec_dimuon_true_id`  | `std::vector<int>`    | List of reconstructed dimuon IDs only when the true dimuon exists.               | `SRecDimuon::get_rec_dimuon_id()`   |
 | `track_id_pos`       | `std::vector<int>`    | Track ID of the positive muon track (returns the index of rhe `SRecTrack`).      | `SRecDimuon::get_track_id_pos()`    |
 | `track_id_neg`       | `std::vector<int>`    | Track ID of the negative muon track (returns the index of rhe `SRecTrack`).      | `SRecDimuon::get_track_id_neg()`    |
-| `rec_px_pos`         | `std::vector<double>` | x-component of the momentum of the vertexed (default) positive muon of the dimuon| `SRecDimuon::get_mom().Px()`        |
-| `rec_py_pos`         | `std::vector<double>` | y-component of the momentum of the vertexed (default) positive muon of the dimuon| `SRecDimuon::get_mom().Py()`        |
-| `rec_pz_pos`         | `std::vector<double>` | z-component of the momentum of the vertexed (default) positive muon of the dimuon| `SRecDimuon::get_mom().Pz()`        |
-| `rec_px_neg`         | `std::vector<double>` | x-component of the momentum of the vertexed (default) negative muon of the dimuon| `SRecDimuon::get_mom().Px()`        |
-| `rec_py_neg`         | `std::vector<double>` | y-component of the momentum of the vertexed (default) negative muon of the dimuon| `SRecDimuon::get_mom().Py()`        |
-| `rec_pz_neg`         | `std::vector<double>` | z-component of the momentum of the vertexed (default) negative muon of the dimuon| `SRecDimuon::get_mom().Pz()`        |
+| `rec_px_pos`         | `std::vector<double>` | x-component of the momentum of the vertexed (default) positive muon of the dimuon| `SRecDimuon::get_mom_pos().Px()`    |
+| `rec_py_pos`         | `std::vector<double>` | y-component of the momentum of the vertexed (default) positive muon of the dimuon| `SRecDimuon::get_mom_pos().PY()`    |
+| `rec_pz_pos`         | `std::vector<double>` | z-component of the momentum of the vertexed (default) positive muon of the dimuon| `SRecDimuon::get_mom_pos().Pz()`    |
+| `rec_px_neg`         | `std::vector<double>` | x-component of the momentum of the vertexed (default) negative muon of the dimuon| `SRecDimuon::get_mom_neg().Px()`    |
+| `rec_py_neg`         | `std::vector<double>` | y-component of the momentum of the vertexed (default) negative muon of the dimuon| `SRecDimuon::get_mom_neg().Py()`    |
+| `rec_pz_neg`         | `std::vector<double>` | z-component of the momentum of the vertexed (default) negative muon of the dimuon| `SRecDimuon::get_mom_pos().Pz()`    |
 | `rec_x_dimuon`       | `std::vector<double>` | x-component of the position of the vertexed (default) dimuon                     | `SRecDimuon::get_pos().X()`         |
 | `rec_y_dimuon`       | `std::vector<double>` | y-component of the position of the vertexed (default) dimuon                     | `SRecDimuon::get_pos().Y()`         |
 | `rec_z_dimuon`       | `std::vector<double>` | z-component of the position of the vertexed (default) dimuon                     | `SRecDimuon::get_pos().Z()`         |
