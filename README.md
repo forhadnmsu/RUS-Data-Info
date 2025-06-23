@@ -25,30 +25,31 @@
 | Variable Name | Type                  | Description                              | User Functions                      |
 |---------------|-----------------------|----------------------------------------|---------------------------------------|
 | `gCharge`     | `std::vector<int>`    | Charges of the Monte Carlo tracks      | `SQTrack::get_charge()`               |
-| `gvx`         | `std::vector<double>` | X-coordinate of the generated vertex  | `SQTrack::get_pos_vtx().X()`           |
-| `gvy`         | `std::vector<double>` | Y-coordinate of the generated vertex  | `SQTrack::get_pos_vtx().Y()`           |
-| `gvz`         | `std::vector<double>` | Z-coordinate of the generated vertex  | `SQTrack::get_pos_vtx().Z()`           |
-| `gpx`         | `std::vector<double>` | X-component of momentum at vertex     | `SQTrack::get_mom_vtx().Px()`          |
-| `gpy`         | `std::vector<double>` | Y-component of momentum at vertex     | `SQTrack::get_mom_vtx().Py()`          |
-| `gpz`         | `std::vector<double>` | Z-component of momentum at vertex     | `SQTrack::get_mom_vtx().Pz()`          |
+| `gTrackID`    | `std::vector<int>`    | Track Ids of the simulated true tracks | `SQTrack::get_track_id()`             |
+| `gvx`         | `std::vector<double>` | X-coordinate of the generated vertex   | `SQTrack::get_pos_vtx().X()`          |
+| `gvy`         | `std::vector<double>` | Y-coordinate of the generated vertex   | `SQTrack::get_pos_vtx().Y()`          |
+| `gvz`         | `std::vector<double>` | Z-coordinate of the generated vertex   | `SQTrack::get_pos_vtx().Z()`          |
+| `gpx`         | `std::vector<double>` | X-component of momentum at vertex      | `SQTrack::get_mom_vtx().Px()`         |
+| `gpy`         | `std::vector<double>` | Y-component of momentum at vertex      | `SQTrack::get_mom_vtx().Py()`         |
+| `gpz`         | `std::vector<double>` | Z-component of momentum at vertex      | `SQTrack::get_mom_vtx().Pz()`         |
 | `gx_st1`      | `std::vector<double>` | X-coordinate at station 1              | `SQTrack::get_pos_st1().X()`          |
 | `gy_st1`      | `std::vector<double>` | Y-coordinate at station 1              | `SQTrack::get_pos_st1().Y()`          |
 | `gz_st1`      | `std::vector<double>` | Z-coordinate at station 1              | `SQTrack::get_pos_st1().Z()`          |
-| `gpx_st1`     | `std::vector<double>` | X-component of momentum at station 1  | `SQTrack::get_mom_st1().Px()`          |
-| `gpy_st1`     | `std::vector<double>` | Y-component of momentum at station 1  | `SQTrack::get_mom_st1().Py()`          |
-| `gpz_st1`     | `std::vector<double>` | Z-component of momentum at station 1  | `SQTrack::get_mom_st1().Pz()`          |
+| `gpx_st1`     | `std::vector<double>` | X-component of momentum at station 1   | `SQTrack::get_mom_st1().Px()`         |
+| `gpy_st1`     | `std::vector<double>` | Y-component of momentum at station 1   | `SQTrack::get_mom_st1().Py()`         |
+| `gpz_st1`     | `std::vector<double>` | Z-component of momentum at station 1   | `SQTrack::get_mom_st1().Pz()`         |
 | `gx_st3`      | `std::vector<double>` | X-coordinate at station 3              | `SQTrack::get_pos_st3().X()`          |
 | `gy_st3`      | `std::vector<double>` | Y-coordinate at station 3              | `SQTrack::get_pos_st3().Y()`          |
 | `gz_st3`      | `std::vector<double>` | Z-coordinate at station 3              | `SQTrack::get_pos_st3().Z()`          |
-| `gpx_st3`     | `std::vector<double>` | X-component of momentum at station 3  | `SQTrack::get_mom_st3().Px()`          |
-| `gpy_st3`     | `std::vector<double>` | Y-component of momentum at station 3  | `SQTrack::get_mom_st3().Py()`          |
-| `gpz_st3`     | `std::vector<double>` | Z-component of momentum at station 3  | `SQTrack::get_mom_st3().Pz()`          |
+| `gpx_st3`     | `std::vector<double>` | X-component of momentum at station 3   | `SQTrack::get_mom_st3().Px()`         |
+| `gpy_st3`     | `std::vector<double>` | Y-component of momentum at station 3   | `SQTrack::get_mom_st3().Py()`         |
+| `gpz_st3`     | `std::vector<double>` | Z-component of momentum at station 3   | `SQTrack::get_mom_st3().Pz()`         |
 
 ## Monte Carlo Truth-Level Dimuon Variables
 | `Variable Name`        | `Type`                | Description                                                                      | `User Functions`              |
 |------------------------|-----------------------|----------------------------------------------------------------------------------|-------------------------------|
 | `g_dimuon_id`          | `std::vector<int>`    | List of dimuon IDs.                                                              | `SQDimuon::get_dimuon_id()`   |
-| `g_dmuon_pdg_id`       | `std::vector<int>`    | List of dimuon IDs.                                                              | `SQDimuon::get_pdg_id()`      |
+| `g_dmuon_pdg_id`       | `std::vector<int>`    | List of dimuon PDG IDs.                                                          | `SQDimuon::get_pdg_id()`      |
 | `g_dimuon_track_id_pos`| `std::vector<int>`    | Track ID of the positive muon track (returns the index of the SRecTrack).        | `SQDimuon::get_track_id_pos()`|
 | `g_dimuon_track_id_neg`| `std::vector<int>`    | Track ID of the negative muon track (returns the index of the SRecTrack).        | `SQDimuon::get_track_id_neg()`|
 | `g_dimuon_px_pos`      | `std::vector<double>` | x-component of the momentum of the vertexed (default) positive muon of the dimuon| `SQDimuon::get_mom_pos().Px()`|
@@ -64,7 +65,7 @@
 ## Reconstructed Track Variables
 | `Variable Name`           | `Type`                | Description                                                                 | `User Functions`                |
 |--------------------------|-----------------------|-----------------------------------------------------------------------------|----------------------------------|
-| `rec_track_id`           | `std::vector<int>`    | Track ID of the recons. muon (set as the index of the vector rec_track_id). |                                  |
+| `rec_track_id`           | `std::vector<int>`    | Track ID of the recons. muon (set as the index of the vector `rec_track_id`). |                                  |
 | `rec_track_charge`       | `std::vector<int>`    | Charge of the reconstructed muons.                                          | `SRecTrack::get_charge()`        |
 | `rec_track_vx`           | `std::vector<double>` | x-coordinate of the reconstructed vertex.                                   | `SRecTrack::get_pos_vtx().X()`   |
 | `rec_track_vy`           | `std::vector<double>` | y-coordinate of the reconstructed vertex.                                   | `SRecTrack::get_pos_vtx().Y()`   |
