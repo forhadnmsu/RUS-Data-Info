@@ -20,7 +20,7 @@
 | `elementID`    | `std::vector<int>`   | Element IDs associated with hits  | `SQHit::get_element_id()`                  |
 | `driftDistance`| `std::vector<double>`| Drift distances for each hit      | `SQHit::get_drift_distance()`              |
 | `tdcTime`      | `std::vector<double>`| TDC timing values for each hit    | `SQHit::get_tdc_time()`                    |
-## Monte Carlo Truth-Level Variables
+## Monte Carlo Truth-Level Track Variables
 
 | Variable Name | Type                  | Description                              | User Functions                      |
 |---------------|-----------------------|----------------------------------------|---------------------------------------|
@@ -44,10 +44,25 @@
 | `gpy_st3`     | `std::vector<double>` | Y-component of momentum at station 3  | `SQTrack::get_mom_st3().Py()`          |
 | `gpz_st3`     | `std::vector<double>` | Z-component of momentum at station 3  | `SQTrack::get_mom_st3().Pz()`          |
 
+## Monte Carlo Truth-Level Dimuon Variables
+| `Variable Name`        | `Type`                | Description                                                                      | `User Functions`              |
+|------------------------|-----------------------|----------------------------------------------------------------------------------|-------------------------------|
+| `g_dimuon_id`          | `std::vector<int>`    | List of dimuon IDs.                                                              | `SQDimuon::get_dimuon_id()`   |
+| `g_dmuon_pdg_id`       | `std::vector<int>`    | List of dimuon IDs.                                                              | `SQDimuon::get_pdg_id()`      |
+| `g_dimuon_track_id_pos`| `std::vector<int>`    | Track ID of the positive muon track (returns the index of the SRecTrack).        | `SQDimuon::get_track_id_pos()`|
+| `g_dimuon_track_id_neg`| `std::vector<int>`    | Track ID of the negative muon track (returns the index of the SRecTrack).        | `SQDimuon::get_track_id_neg()`|
+| `g_dimuon_px_pos`      | `std::vector<double>` | x-component of the momentum of the vertexed (default) positive muon of the dimuon| `SQDimuon::get_mom_pos().Px()`|
+| `g_dimuon_py_pos`      | `std::vector<double>` | y-component of the momentum of the vertexed (default) positive muon of the dimuon| `SQDimuon::get_mom_pos().Py()`|
+| `g_dimuon_pz_pos`      | `std::vector<double>` | z-component of the momentum of the vertexed (default) positive muon of the dimuon| `SQDimuon::get_mom_pos().Pz()`|
+| `g_dimuon_px_neg`      | `std::vector<double>` | x-component of the momentum of the vertexed (default) negative muon of the dimuon| `SQDimuon::get_mom_neg().Px()`|
+| `g_dimuon_py_neg`      | `std::vector<double>` | y-component of the momentum of the vertexed (default) negative muon of the dimuon| `SQDimuon::get_mom_neg().Py()`|
+| `g_dimuon_pz_neg`      | `std::vector<double>` | z-component of the momentum of the vertexed (default) negative muon of the dimuon| `SQDimuon::get_mom_neg().Pz()`|
+| `g_dimuon_x`           | `std::vector<double>` | x-component of the position of the vertexed (default) dimuon                     | `SQDimuon::get_pos().X()`     |
+| `g_dimuon_y`           | `std::vector<double>` | y-component of the position of the vertexed (default) dimuon                     | `SQDimuon::get_pos().Y()`     |
+| `g_dimuon_z`           | `std::vector<double>` | z-component of the position of the vertexed (default) dimuon                     | `SQDimuon::get_pos().Z()`     |
 
 ## Reconstructed Track Variables
-These variables store information about reconstructed muon tracks, will be obtained from the `SRecTrack` class, at the vertex, stations 1 and 3, target, and dump regions.
-| `Variable Name`           | `Type`                | Description                                                                 | `User Functions`                   |
+| `Variable Name`           | `Type`                | Description                                                                 | `User Functions`                |
 |--------------------------|-----------------------|-----------------------------------------------------------------------------|----------------------------------|
 | `rec_track_id`           | `std::vector<int>`    | Track ID of the recons. muon (set as the index of the vector rec_track_id). |                                  |
 | `rec_track_charge`       | `std::vector<int>`    | Charge of the reconstructed muons.                                          | `SRecTrack::get_charge()`        |
@@ -87,8 +102,7 @@ These variables store information about reconstructed muon tracks, will be obtai
 | `rec_track_py_dump`      | `std::vector<double>` | y-component of the reconstructed momentum at the dump.                      | `SRecTrack::get_mom_dump().Py()` |
 | `rec_track_pz_dump`      | `std::vector<double>` | z-component of the reconstructed momentum at the dump.                      | `SRecTrack::get_mom_dump().Pz()` |
 
-## Dimuon Variables
-The following table lists the reconstructed dimuon variables used in the analysis, with the updated naming convention prefixed by `rec_dimuon_`. These variables are stored in `std::vector` containers and are accessible via the specified user functions from the `SRecDimuon` class.
+## Reconstructed Dimuon Variables
 
 | `Variable Name`           | `Type`                | Description                                                                     | `User Functions`                   |
 |--------------------------|-----------------------|----------------------------------------------------------------------------------|-----------------------------------|
