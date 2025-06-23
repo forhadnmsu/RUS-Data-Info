@@ -47,7 +47,6 @@
 ## Dimuon Variables
 The following table lists the reconstructed dimuon variables used in the analysis, with the updated naming convention prefixed by `rec_dimuon_`. These variables are stored in `std::vector` containers and are accessible via the specified user functions from the `SRecDimuon` class.
 
-```cpp
 | Variable Name                | Type                  | Description                                                                      | User Functions                      |
 |------------------------------|-----------------------|----------------------------------------------------------------------------------|-------------------------------------|
 | rec_dimuon_id                | std::vector<int>      | List of dimuon IDs.                                                              | SRecDimuon::get_dimuon_id()         |
@@ -79,7 +78,6 @@ The following table lists the reconstructed dimuon variables used in the analysi
 ## Reconstructed Track Variables
 These variables store information about reconstructed muon tracks, will be obtained from the `SRecTrack` class, at the vertex, stations 1 and 3, target, and dump regions.
 
-```cpp
 | Variable Name              | Type                  | Description                                                                 | User Functions                         |
 |----------------------------|-----------------------|-----------------------------------------------------------------------------|----------------------------------------|
 | rec_track_id               | std::vector<int>      | Track ID of the recons. muon (set as the index of the vector rec_track_id). |                                        |
